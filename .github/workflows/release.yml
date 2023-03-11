@@ -1,0 +1,37 @@
+# name: Release
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [18.x]
+#         mongodb-version: ['6.0']
+
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@master
+#         with:
+#           # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+#           fetch-depth: 0
+
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
+
+#       - name: Install Dependencies
+#         run: npm install
+
+#       - name: Create Release Pull Request
+#         uses: changesets/action@master
+#         with:
+#           title: Bump Package Version
+#           commit: bumped package version
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
