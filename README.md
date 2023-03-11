@@ -3,17 +3,8 @@
 ## About 
 A starter template for Express and Node.js API server w/ Typescript
 
-**********************************************************************
-THIS IS A REMINDER
-**********************************************************************
-
-After copying this template, feel free to uncomment the YAML files
-found in the the `.github/workflows` folder. 
-
-Delete this section after reading.
-
-**********************************************************************
-**********************************************************************
+After copying this template, feel free to make use of the Github actions
+files found in the the `.github/workflows` folder. 
 
 ### Built With
 - Typescript
