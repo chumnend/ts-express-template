@@ -32,7 +32,12 @@ git clone https://github.com/chumnend/xchumz-auth.git
 npm install
 ```
 
-3) Make a copy of `.env.example` and fill in fields
+3) Install git hooks
+```
+npx husky install
+```
+
+4) Make a copy of `.env.example` and fill in fields
 ```
 cp .env.example .env
 ```
@@ -43,8 +48,15 @@ cp .env.example .env
 # node environment setting ie. 'development', 'production', etc
 NODE_ENV=development
 
-# node server port ie. 8080
-PORT=8080
+# node server port ie. 3000
+PORT=3000
+
+...
+```
+
+5) Start the development server
+```
+npm run dev
 ```
 
 ### Other Useful Commands
