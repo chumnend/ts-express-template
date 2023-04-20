@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import path from 'path';
 
 import config from './config';
 import { HttpError } from './utils';
@@ -13,7 +12,6 @@ const app = express();
 // configure app
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
 // istanbul ignore next
@@ -24,10 +22,6 @@ if (config.env !== 'test') {
 // setup api routes
 app.get('/status', (req: express.Request, res: express.Response) => {
   return res.send('OK');
-});
-
-app.get('/', (req: express.Request, res: express.Response) => {
-  return res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 app.all('*', (req: express.Request, res: express.Response, next: express.NextFunction) => {
