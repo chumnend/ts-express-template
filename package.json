@@ -1,7 +1,7 @@
 {
-  "name": "ts-express-template",
+  "name": "xchumz.com",
   "version": "0.1.0",
-  "description": "this is a template for a typescript express server",
+  "description": "a creative project site",
   "main": "index.js",
   "scripts": {
     "build": "tsc",

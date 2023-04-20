@@ -1,10 +1,7 @@
-# Express API Template
+# xchumz
 
 ## About 
-A starter template for Express and Node.js API server w/ Typescript
-
-After copying this template, feel free to make use of the Github actions
-files found in the the `.github/workflows` folder. 
+Static site for xchumz.com
 
 ### Built With
 - Typescript
@@ -24,7 +21,7 @@ OK
 ### Getting Started 
 1) Clone this repository
 ```
-git clone https://github.com/chumnend/xchumz-auth.git
+git clone git@github.com:chumnend/xchumz.com.git
 ```
 
 2) Install dependencies 

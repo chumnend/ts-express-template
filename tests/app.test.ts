@@ -20,6 +20,21 @@ describe('App', () => {
     });
   });
 
+  describe('/', () => {
+    it('expects to get html file', function (done) {
+      chai
+        .request(app)
+        .get('/')
+        .end((err, res) => {
+          expect(err).to.be.null;
+          expect(res).to.have.status(200);
+          expect(res).to.be.html;
+          expect(res.text).to.include('<html');
+          done();
+        });
+    });
+  });
+
   describe('GET /not-a-path', function () {
     it('expects to encounter 404', function (done) {
       chai
