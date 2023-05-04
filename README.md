@@ -6,6 +6,9 @@ A starter template for Express and Node.js API server w/ Typescript
 After copying this template, feel free to make use of the Github actions
 files found in the the `.github/workflows` folder. 
 
+If working with non .ts, .js files, you may want to take a look at the `scripts/copyAssets` script to help
+you create your distribution bundle.
+
 ### Built With
 - Typescript
 - Node

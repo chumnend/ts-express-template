@@ -11,7 +11,7 @@
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix && ./node_modules/.bin/prettier --write ./src",
     "test": "NODE_ENV=test nyc ./node_modules/.bin/_mocha -r ts-node/register tests/**/*.test.ts --exit",
-    "copy-assets": "ts-node tools/copyAssets",
+    "copy-assets": "ts-node scripts/copyAssets",
     "clean": "rimraf dist/ node_modules/"
   },
   "author": "Nicholas Chumney",
