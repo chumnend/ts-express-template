@@ -4,7 +4,7 @@
   "description": "this is a template for a typescript express server",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy-assets",
     "prestart": "npm run build",
     "start": "node dist/index.js",
     "dev": "NODE_ENV=development nodemon src/index.ts",
@@ -12,7 +12,7 @@
     "lint:fix": "./node_modules/.bin/eslint ./src --fix && ./node_modules/.bin/prettier --write ./src",
     "test": "NODE_ENV=test nyc ./node_modules/.bin/_mocha -r ts-node/register tests/**/*.test.ts --exit",
     "copy-assets": "ts-node scripts/copyAssets",
-    "clean": "rimraf dist/ node_modules/"
+    "clean": "rimraf dist/ node_modules/ .nyc_output"
   },
   "author": "Nicholas Chumney",
   "license": "ISC",
